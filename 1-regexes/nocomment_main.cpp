@@ -6,6 +6,8 @@
 // This is the yylval variable that the nocomment.hpp header file refers to.
 TokenValue yylval;
 
+extern int removed_count;
+
 int main () { 
 
   while (1) {
@@ -29,7 +31,7 @@ int main () {
     }
   }
 
-  std::cout << "Number of comments and attributes removed: 0.\n";
+  std::cout << "Number of comments and attributes removed: " << removed_count << "." << std::endl;
     
   return 0;
 }
